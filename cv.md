@@ -22,3 +22,55 @@ My discipline and perseverance will help me to reach my goal, and [rolling-scope
 + React JS (basic knowledge)
 + Figma
 + Sass (basic knowledge)
+
+## Code example
+
+Working on my portfolio page I implemented scroll sections active link functionality:
+
+```js
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 72;
+        const sectionId = current.getAttribute('id');
+        if(scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive);
+```
+
+## Education
+
++ GrSU Yanka Kupala (2020 - current)
+
+### Courses
+
++ [JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/certification/Eugene29/javascript-algorithms-and-data-structures) on freeCodeCamp (Oct, 2022)
+
++ [JavaScript for Beginners](https://stepik.org/cert/1888775) on Stepik (Dec, 2022)
+
++ [Веб-разработка для начинающих: HTML и CSS](https://stepik.org/cert/1775379) on Stepik (Jan, 2023)
+
++ [Responsive Web Design](https://www.freecodecamp.org/certification/Eugene29/responsive-web-design) on freeCodeCamp (Feb, 2023)
+
+## My projects
+
++ [Plants app](https://eugenezanevskij.github.io/plants/plants/) 
++ [Tip Calculator](https://eugenezanevskij.github.io/Tip-calculator/)
++ [Uber Eats](https://eugenezanevskij.github.io/Uber-Eats/)
+
+## Languages:
++ Russian - Native
++ English - B2 (Upper-Intermediate)
+
+Completed General English Course at Upper Intermediate level (CEFR B2) 
+
+[Certificate of completion](https://cert.str.by/streamline-certificate/BEE087427DBC6599224E8DC5682D6955)
